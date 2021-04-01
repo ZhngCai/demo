@@ -3,7 +3,8 @@ import { CHANGE_INPUT , ADD_ITEM , DELETE_ITEM,GET_LIST } from './actionTypes'
 
 const defaultState = {
   inputValue:"Write Something",
-  list:[]
+  list:[],
+  test:0
 }
 
 export default (state = defaultState,action)=>{

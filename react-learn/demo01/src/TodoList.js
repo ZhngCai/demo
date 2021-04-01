@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import store from './store'
 import {changeInputAction , addItemAction ,deleteItemAction,getListAction,getTodoList,getMyListAction} from './store/actionCreators' 
 import TodoListUI from './TodoListUI'
+import Test from './Test'
 
 const data=[
     
@@ -43,9 +44,23 @@ class TodoList extends Component {
     store.dispatch(action)
   }
 
+  handleAdd(){
+    let num = this.state.test;
+    this.setState({
+      test:num+1
+    })
+  }
+
   render() { 
       return ( 
-         <TodoListUI
+        <div>
+          <button
+            onClick={()=>{this.handleAdd()}}
+          >+</button>
+          <Test
+            test={this.state.test}
+          ></Test>
+          <TodoListUI
             inputValue={this.state.inputValue}
             list={this.state.list}
             
@@ -54,6 +69,8 @@ class TodoList extends Component {
             deleteItem = {(index)=>{this.deleteItem(index)}}
             
          ></TodoListUI>
+        </div>
+         
       );
   }
 }
