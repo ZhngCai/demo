@@ -1,5 +1,6 @@
 export default {
   pages: [
+    'pages/question/index',
     'pages/index/index',
     'pages/my/index',
     'pages/user/index',

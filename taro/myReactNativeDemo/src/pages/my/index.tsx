@@ -6,7 +6,7 @@ import './index.scss'
 
 function My(){
   function handelClick(){
-    console.log("handelClick>>>")
+    console.log("handelClick>>>1")
     Taro.navigateTo({ url: '/pages/user/index' })
   }
 
