@@ -44,7 +44,9 @@
     "@tarojs/taro-rn": "^3.2.6",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-native": "^0.64.0"
+    "react-native": "^0.64.0",
+    "react-native-elements": "^3.4.1",
+    "react-native-vector-icons": "^8.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",

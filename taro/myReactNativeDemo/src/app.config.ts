@@ -1,8 +1,9 @@
 export default {
   pages: [
+    'pages/my/index',
     'pages/question/index',
     'pages/index/index',
-    'pages/my/index',
+    
     'pages/user/index',
   ],
   tabBar: {
