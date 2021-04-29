@@ -4,10 +4,9 @@ import { View, Text } from '@tarojs/components'
 import './index.scss'
 // import { Button } from 'react-native-elements';
 import { Animated } from 'react-native'
-import { Avatar, Badge, withBadge, Button, ButtonGroup, Card, ListItem, Input, Overlay, PricingCard, Rating, AirbnbRating, SearchBar, Slider, SpeedDial, Switch, Tab, Tooltip } from 'react-native-elements'
+import { Avatar, Badge, withBadge, Button, ButtonGroup, Card, ListItem, Input, Overlay, PricingCard, Rating, AirbnbRating, SearchBar, Slider, SpeedDial, Switch, Tab, Tooltip, CheckBox, Divider, LinearProgress } from 'react-native-elements'
 // import { ListItem } from 'react-native-elements/dist/list/ListItem';
 import Icon from 'react-native-vector-icons/FontAwesome';
-// import Modal from 'modal-react-native-web';
 
 function My() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,6 +14,7 @@ function My() {
   const [search, setSearch] = useState("");
   const [sliderValue, setSliderValue] = useState("");
   const [open, setOpen] = useState(false);
+  const [buttons, setButton] = useState(['Hello', 'World', 'Buttons']);
 
 
   function handelClick() {
@@ -23,7 +23,7 @@ function My() {
   }
 
 
-  const buttons = ['Hello', 'World', 'Buttons']
+  // const buttons = ['Hello', 'World', 'Buttons']
 
   function updateIndex(selectedIndex) {
     console.log("updateIndex")
@@ -56,14 +56,21 @@ function My() {
   const updateSearch = (search) => {
     setSearch(search);
   };
+  const hchecked = (checked) => {
+    console.log(checked)
+  };
 
 
   return (
 
     <View>
-      {/* <Tooltip ModalComponent={Modal} popover={<Text>Info here</Text>}>
-        <Text>Press me</Text>
-      </Tooltip> */}
+      <LinearProgress color="primary" />
+      <Divider style={{ backgroundColor: 'blue' }} />
+      <CheckBox
+        title='Click Here'
+        checked={(v) => { hchecked(v) }}
+      />
+      <Divider style={{ backgroundColor: 'blue' }} />;
       <Tooltip popover={<Text>Info here</Text>}>
         <Text>Press me</Text>
       </Tooltip>
@@ -154,7 +161,7 @@ function My() {
         <Card.Image source={require('../src/asset/images/icon_API.png')}>
           <Text style={{ marginBottom: 10 }}>
             The idea with React Native Elements is more about component structure than actual design.
-    </Text>
+        </Text>
           <Button
             icon={<Icon name='code' color='#ffffff' />}
             buttonStyle={{ borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0 }}
@@ -206,7 +213,7 @@ function My() {
         onPress={(index) => { updateIndex(index) }}
         selectedIndex={selectedIndex}
         buttons={buttons}
-        containerStyle={{ height: 100 }}
+        containerStyle={{ height: 100, marginBottom: 100 }}
       />
 
       {/* <BottomSheet
