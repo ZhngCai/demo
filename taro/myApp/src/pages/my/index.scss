@@ -1,0 +1,23 @@
+.panle1{
+    position: relative;
+    padding: 20px;
+    display: flex;
+}
+
+.search{
+    border: 1px solid #ccc;
+    flex: 1;
+    height: 50px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.panle1 button{
+    width: 150px;
+    height: 100px;
+    margin-left: 10px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 100px;
+}

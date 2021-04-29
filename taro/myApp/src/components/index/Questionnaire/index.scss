@@ -1,0 +1,45 @@
+.index{
+    position: relative;
+    padding: 10px;
+}
+
+.tit{
+    // align-self:center;
+    position: relative;
+    width: 250px;
+    margin: auto;
+}
+
+.search{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    position: relative;
+    margin: 20px auto ;
+    // align-self: flex-end;
+}
+
+.grid{
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 660px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.grid-ul{
+    display: flex;
+}
+
+.grid-li{
+    flex: 1;
+}
+
+.grid-sj{
+    flex: 1;
+}
+
+.grid-Dropdown{
+    width: 100px;
+}
