@@ -65,7 +65,7 @@ const OSIndex: FC = () => {
   };
 
   return (
-    <View className='index'>
+    <View>
       {
         isShow &&
         <>

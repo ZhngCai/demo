@@ -23,7 +23,7 @@ const OSSubjectMenu: FC<IOSSubjectProps> = ({
   return (
     <View className='content-map'>
       <View className='content-topic__tit'>
-        <View>{title}</View>
+        <View className='os-h3'>{title}</View>
         <View className='iconfont icon-menu' onClick={() => { setVisiable(!visiable) }}></View>
       </View>
       <View className='content-topic__map'>

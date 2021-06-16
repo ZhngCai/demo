@@ -60,10 +60,10 @@ const OSReportMap: FC = () => {
 
   return (
     <View className='os-map'>
-      <View className='os-map-row'>
+      <View>
         {
           fdata.map((item, index) => (
-            <View className='content-topic' key={index}>
+            <View className='os-map-row' key={index}>
               {
                 (item.type == 'select' && <OSSubjectSelect title={`Q${index + 1}.单选题`} data={item}></OSSubjectSelect>
                 ) ||

@@ -7,6 +7,7 @@ import { useBehavior, useTableMarkData, useTypeBehvios } from "./behavior";
 import './index.scss'
 
 import { IOSSubjectProps, sequenceMapType } from "./types";
+import OSHr from "../os_base/os_hr";
 
 const OSSubjectValueMark: FC<IOSSubjectProps> = ({
   title,
@@ -20,9 +21,10 @@ const OSSubjectValueMark: FC<IOSSubjectProps> = ({
   return (
     <View className='content-map'>
       <View className='content-topic__tit'>
-        <View>{title}</View>
+        <View className='os-h3'>{title}</View>
         <View className='iconfont icon-menu' onClick={() => { setVisiable(!visiable) }}></View>
       </View>
+      <OSHr direction='hor'></OSHr>
       <View className='content-topic__map'>
         <OSModalTable data={tData} mapType={sequenceMapType} visiable={visiable} handleEvent={handleEvent}></OSModalTable>
         {fdata.showType[0] && <OSMap mapType={fdata.mapType} label={label} seriesData={seriesData}></OSMap>}

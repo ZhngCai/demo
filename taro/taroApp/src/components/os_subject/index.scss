@@ -4,26 +4,18 @@
   .content-link {
     .content-topic__tit {
       display: flex;
-      margin-bottom: 20px;
-      h3 {
-        padding: 10px 0 40px;
-        border-bottom: 1px solid #eaeaea;
+      .os-h3 {
+        padding: 20px 0 80px;
         flex: 1;
-      }
-      p {
-        // width: 50px;
       }
     }
   }
   .content-map {
     .content-topic__tit {
       display: flex;
-      padding-right: 10px;
-      h3 {
+      padding-right: 20px;
+      .os-h3 {
         flex: 1;
-      }
-      p {
-        // width: 50px;
       }
     }
   }
@@ -33,9 +25,11 @@
   }
 
   &-topic__link {
-    p {
+    padding-top: 40px;
+    .os-p {
       display: flex;
       justify-content: space-between;
+      color: $font-color-secondary;
     }
   }
 }
