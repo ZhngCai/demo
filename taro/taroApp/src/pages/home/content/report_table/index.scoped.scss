@@ -1,0 +1,110 @@
+/** @format */
+
+.ostable {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+  position: relative;
+  background: $back-base;
+  table {
+    font-size: $font-size-base;
+    border-radius: 2px 2px 0 0;
+    border-spacing: 0;
+    text-align: left;
+    min-width: 100%;
+    thead {
+      tr {
+        border-bottom: 1px solid $border-base;
+        th {
+          background: $back-light;
+        }
+      }
+    }
+
+    tfoot {
+      .pageInfo {
+        text-align: center;
+        input {
+          width: 40px;
+          border: 1px solid $input-border-base;
+          text-align: center;
+        }
+        .to-page {
+          margin-left: 10px;
+        }
+      }
+    }
+    tr {
+      line-height: 40px;
+      border-bottom: 1px solid $border-base;
+      th,
+      td {
+        color: $font-color-base;
+        font-weight: 500;
+        position: relative;
+        text-align: left;
+        padding: 8px;
+        white-space: nowrap;
+      }
+    }
+
+    .fixed {
+      background: $back-base;
+      position: -webkit-sticky;
+      position: sticky;
+      right: 0;
+      padding: 0 12px;
+    }
+    .fixed::after {
+      content: "";
+      bottom: -1px;
+      left: 0px;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      transform: translateX(-100%);
+      width: 1px;
+      box-shadow: -5px 0px 6px rgb(0, 0, 0, 0.5);
+      box-sizing: border-box;
+    }
+    .operate {
+      color: $font-color-active;
+      border-bottom: 0;
+    }
+  }
+}
+
+.pagination {
+  padding: 20px;
+  text-align: center;
+  background: $back-light;
+  input {
+    width: 40px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+  }
+  .to-page {
+    margin-left: 10px;
+    color: $font-color-active;
+  }
+}
+
+.empty {
+  background: $back-base;
+  border: 1px solid $border-base;
+  color: #00000040;
+  .iconfont {
+    font-size: $font-size-xxl;
+  }
+}
+
+.pre {
+  display: inline-block;
+  transform: rotate(180deg);
+  margin: 0 10px;
+}
+
+.next {
+  display: inline-block;
+  margin: 0 10px;
+}

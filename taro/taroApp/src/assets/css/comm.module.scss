@@ -1,0 +1,49 @@
+/** @format */
+
+/** 
+ *Backgorund Color
+ */
+$back-base: #fff !default; // 背景的基本色
+$back-secondary: #ededed !default; // 辅助色
+$back-active: #1890ff !default; //激活
+$back-light: #fafafa !default;
+
+/** 
+ *Font Color
+ */
+$font-color-base: #4b5563 !default; // 文字的基本色
+$font-color-active: #1890ff; //激活
+$font-color-active-inverse: #fff !default; // 反色
+$font-color-secondary: #a3a3a3 !default; // 辅助色
+
+/** 
+ *Font Size
+ */
+$font-size-xs: 10px !default; // 非常用字号，用于标签
+$font-size-sm: 12px !default; // 用于辅助信息
+$font-size-base: 14px !default; // 常用字号
+$font-size-lg: 16px !default; // 常规标题
+$font-size-xl: 18px !default; // 大标题
+$font-size-xxl: 24px !default; // 用于大号的数字
+$font-size-h1: 29px !default; // 标题h1字体
+$font-size-h2: 20px !default; // 标题h2字体
+$font-size-h3: 16px !default; // 标题h3字体
+$font-size-h4: 10px !default; // 标题h4字体
+/** 
+ *Btn Color
+ */
+$btn-back-base: #f3f4f6 !default; // 按钮的基本色
+$btn-back-active: #1890ff; //激活
+
+/** 
+ *Border Color
+ */
+$border-base: #f0f0f0 !default; // 边的基本色
+$border-active: #1890ff; //激活
+
+/** 
+ *Input Color
+ */
+$input-border-base: #f0f0f0 !default; // 基本色
+$input-border-focus: #e59700 !default; // 选中色
+$input-border-active: #e59700; //激活

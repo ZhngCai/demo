@@ -1,0 +1,51 @@
+/** @format */
+
+.content {
+  &-menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background: $back-base;
+    border-bottom: 1px solid $border-base;
+    padding: 0px 15px;
+    display: flex;
+    z-index: 999;
+    p {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      top: 1px;
+      vertical-align: bottom;
+      margin: -1px 40px 0;
+      span {
+        display: inline-block;
+        line-height: 50px;
+      }
+    }
+    p.active {
+      color: $font-color-active;
+      border-bottom: 2px solid $border-active;
+    }
+  }
+  ul {
+    li {
+      padding: 20px;
+      background: $back-base;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.loading {
+  background: $back-base;
+  padding-top: 20px;
+}
+
+.loading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: $back-base url(../../../assets/image/loading.gif) no-repeat center;
+  background-size: auto 100%;
+}
