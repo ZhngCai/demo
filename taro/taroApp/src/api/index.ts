@@ -1,8 +1,7 @@
 /** @format */
 import OSApi, { IRequestParams } from "@choiceform/os-api";
 import { request } from "@tarojs/taro";
-import storage from "../util/storage";
-import { HOST } from "./api";
+import storage from "../utils/storage";
 
 let api: OSApi;
 
@@ -17,8 +16,6 @@ export function getApi() {
   if (session) {
     jwt = JSON.parse(session).jwt;
   }
-
-  console.log('jwt', jwt);
 
   if (jwt) {
     api = new OSApi(jwt, options);

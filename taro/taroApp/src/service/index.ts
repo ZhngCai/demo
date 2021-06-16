@@ -7,7 +7,7 @@ import {
   ILayout,
 } from "@choiceform/os-api/dist/es6/data-grid";
 import { getApi } from "../api";
-import storage from "../util/storage";
+import storage from "../utils/storage";
 
 /**
  *  获取问卷信息

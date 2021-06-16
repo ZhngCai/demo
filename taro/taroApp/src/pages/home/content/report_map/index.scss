@@ -1,0 +1,9 @@
+@import "@/app.scss";
+
+.os-map {
+  &-row {
+    padding: 48px;
+    background: $back-base;
+    margin-bottom: 8px;
+  }
+}

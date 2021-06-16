@@ -1,0 +1,41 @@
+/** @format */
+@import "@/app.scss";
+.content {
+  .content-link {
+    .content-topic__tit {
+      display: flex;
+      margin-bottom: 20px;
+      h3 {
+        padding: 10px 0 40px;
+        border-bottom: 1px solid #eaeaea;
+        flex: 1;
+      }
+      p {
+        // width: 50px;
+      }
+    }
+  }
+  .content-map {
+    .content-topic__tit {
+      display: flex;
+      padding-right: 10px;
+      h3 {
+        flex: 1;
+      }
+      p {
+        // width: 50px;
+      }
+    }
+  }
+
+  &-topic__map {
+    position: relative;
+  }
+
+  &-topic__link {
+    p {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

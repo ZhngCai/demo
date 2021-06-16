@@ -1,5 +1,5 @@
 import { FC } from "react";
-import './index.scoped.scss'
+import './index.scss'
 
 const OSError: FC = () => {
   return (

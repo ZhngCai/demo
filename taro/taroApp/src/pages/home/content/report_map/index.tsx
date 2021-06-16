@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef } from "react";
-import { useHistory } from "react-router";
+import { View } from "@tarojs/components";
 
 import {
   OSSubjectSelect,
@@ -16,27 +16,26 @@ import {
   OSSubjectVerify
 } from "../../../../components/os_subject";
 
-import { getLocalStorage } from "../../../../utils/common";
 import { useBehavior } from "./berhavior";
 import OSSubjectMenu from "../../../../components/os_subject/menu";
-import '../index.scoped.scss'
+import '../index.scss'
 import { useGlobalContext } from "../../../../context";
-import { useDidRecover } from "react-router-cache-route";
 import { TCardNameTypeBlank } from "../../../../components/os_subject/subject";
+import storage from "../../../../utils/storage";
+import './index.scss'
 
 
 const OSReportMap: FC = () => {
   const {
     editScrollEvent: { setScrollEventFun },
   } = useGlobalContext();
-  let history = useHistory();
-  const survey_id = getLocalStorage('surveyId');
+  const survey_id = storage.get('surveyId');
   const loadingRef = useRef<HTMLDivElement>(null);
   const { fdata, loading, getHTTPGetDataAnalysis, handleScroll } = useBehavior(loadingRef);
 
   const handleClick = (id: string, type: TCardNameTypeBlank) => {
     removeEventScroll();
-    history.push(`/answer/${type}/${id}`);
+    // history.push(`/answer/${type}/${id}`);
   }
 
   useEffect(() => {
@@ -47,10 +46,6 @@ const OSReportMap: FC = () => {
     }
   }, [])
 
-  useDidRecover(() => {
-    addEventScroll();
-    getHTTPGetDataAnalysis(survey_id);
-  })
 
   const addEventScroll = () => {
     window.addEventListener('scroll', handleScroll)
@@ -64,11 +59,11 @@ const OSReportMap: FC = () => {
   setScrollEventFun.remove(removeEventScroll);
 
   return (
-    <div>
-      <ul>
+    <View className='os-map'>
+      <View className='os-map-row'>
         {
           fdata.map((item, index) => (
-            <li className='content-topic' key={index}>
+            <View className='content-topic' key={index}>
               {
                 (item.type == 'select' && <OSSubjectSelect title={`Q${index + 1}.单选题`} data={item}></OSSubjectSelect>
                 ) ||
@@ -96,14 +91,14 @@ const OSReportMap: FC = () => {
                 ||
                 (item.type == 'upload' && <OSSubjectUpload title={`Q${index + 1}.上传题`} handleClick={handleClick} data={item}></OSSubjectUpload>)
               }
-            </li>
+            </View>
           ))
         }
-      </ul>
+      </View>
       {
-        loading && <div className='loading' ref={loadingRef}></div>
+        loading && <View className='loading' ref={loadingRef}></View>
       }
-    </div>
+    </View>
   );
 };
 

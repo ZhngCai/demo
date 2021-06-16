@@ -2,8 +2,8 @@ import { FC, useEffect, useState } from 'react'
 // import { navigateTo } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import './index.scss'
-import { getPageParams } from '../../util/router'
-import storage from '../../util/storage'
+import { getPageParams } from '../../utils/router'
+import storage from '../../utils/storage'
 import { HTTPCollectorGet, HTTPGridLayout, HTTPSurveyGet } from '../../service'
 import OSInfoList from './info_list'
 import OSContent from './content'
@@ -70,7 +70,7 @@ const OSIndex: FC = () => {
         isShow &&
         <>
           <OSInfoList></OSInfoList>
-          {/* <OSContent></OSContent> */}
+          <OSContent></OSContent>
         </>
       }
     </View>

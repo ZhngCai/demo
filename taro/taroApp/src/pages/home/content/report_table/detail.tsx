@@ -5,7 +5,7 @@ import { FC, useEffect, useState } from "react";
 import { BSetHeadData, IHeadData } from "../behavior";
 import { HTTPGridBodyRows } from "../../../../service";
 import { formatNumber } from "../../../../utils/format";
-import './index.scoped.scss'
+import './index.scss'
 import { useGlobalContext } from "../../../../context";
 
 const OSDetailTable: FC = () => {

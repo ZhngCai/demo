@@ -1,2 +1,7 @@
 @import "./assets/css/comm.module.scss";
 @import "./assets/css/iconfont.scss";
+
+#app {
+  background: $back-secondary;
+  font-size: $font-size-base;
+}

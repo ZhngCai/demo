@@ -1,12 +1,13 @@
 import { FC, useEffect, useState } from "react";
-
-import './index.scoped.scss'
+import { View, Text } from "@tarojs/components";
 
 import OSDetailTable from "./report_table/detail";
 import { HTTPGridHeaderRow } from "../../../service";
 import OSReportMap from "./report_map";
-import { getLocalStorage } from "../../../utils/common";
 import { useGlobalContext } from "../../../context";
+import storage from "../../../utils/storage";
+import './index.scss'
+
 
 const OSContent: FC = () => {
   const {
@@ -14,7 +15,7 @@ const OSContent: FC = () => {
     editHeaderRow: { headerRow, setHeaderRow },
   } = useGlobalContext();
   const [tab, setTab] = useState<string>('report');
-  const survey_id = getLocalStorage('surveyId');
+  const survey_id = storage.get('surveyId');
   const handleTabChange = (val: string) => () => {
     getScrollEventFun.remove();
     setTab(val);
@@ -34,29 +35,29 @@ const OSContent: FC = () => {
 
 
   return (
-    <div className='content'>
-      <div className='content-menu'>
-        <p className={tab == 'report' ? 'active' : ''} onClick={handleTabChange('report')}>
-          <span>统计报表</span>
-        </p>
-        <p className={tab == 'detail' ? 'active' : ''} onClick={handleTabChange('detail')}>
-          <span>数据详情</span>
-        </p>
-      </div>
+    <View className='content'>
+      <View className='content-menu'>
+        <View className={`content-menu-p ${tab == 'report' ? 'active' : ''}`} onClick={handleTabChange('report')}>
+          <Text className='content-menu-text'>统计报表</Text>
+        </View>
+        <View className={`content-menu-p ${tab == 'detail' ? 'active' : ''}`} onClick={handleTabChange('detail')}>
+          <Text className='content-menu-text'>数据详情</Text>
+        </View>
+      </View>
       {
         tab == 'report' && headerRow.headers &&
         (
           <OSReportMap></OSReportMap>
         )
       }
-      {
+      {/* {
         tab == 'detail' && headerRow.headers &&
         (
           <OSDetailTable></OSDetailTable>
         )
-      }
+      } */}
 
-    </div>
+    </View>
   );
 };
 

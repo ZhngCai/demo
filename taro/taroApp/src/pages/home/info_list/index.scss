@@ -1,30 +1,27 @@
 /** @format */
-// .info-list {
-//   padding: 20px 0;
-//   background: $back-base;
-//   margin-bottom: 15px;
-// }
+@import "@/app.scss";
+.info {
+  padding: 20px 0;
+  background: $back-base;
+  margin-bottom: 15px;
+  display: flex;
+  &-row {
+    flex: 1;
+    text-align: center;
+    color: $font-color-secondary;
+    &-p {
+      margin-bottom: 8px;
+    }
+    &-p:last-child {
+      font-size: $font-size-24;
+      color: $font-color-base;
+    }
+  }
+  &-row:first-child {
+    border-left: 0;
+  }
+}
 
-// .info-list ul {
-//   display: flex;
-// }
-
-// .info-list ul li {
-//   flex: 1;
-//   text-align: center;
-//   color: $font-color-secondary;
-//   border-left: 1px solid $border-base;
-// }
-
-// .info-list ul li:first-child {
-//   border-left: 0;
-// }
-
-// .info-list ul li p {
-//   margin-bottom: 8px;
-// }
-
-// .info-list ul li p:last-child {
-//   font-size: $font-size-xxl;
-//   color: $font-color-base;
-// }
+.info-list ul li:first-child {
+  border-left: 0;
+}
