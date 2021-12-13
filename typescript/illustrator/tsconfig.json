@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "moduleResolution": "Node"
+  },
+  "include": [
+    "../spec/**/*.ts",
+    "../illustrator/*.ts",
+  ]
+}

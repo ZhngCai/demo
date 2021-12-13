@@ -1,0 +1,5 @@
+{
+  "comment": "  接口地址： https://public.choiceform.com/fake-request-exploits/distatest/main/color/age_verify ",
+  "loose": false,
+  "params": [{"name":"value","type":"string","optional":false,"comment":""}]
+}
